@@ -1,0 +1,29 @@
+html { scroll-behavior: smooth; } 
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media only screen and (min-width: 600px) {
+    .background-image-container {
+        background-attachment: fixed;
+    }
+}
+
+.row > .col-md-5 > h3 {
+    margin-top: 0px;
+}
+
+.container_uh {
+    display: grid;
+    /* justify-content: center; */
+    grid-template-columns: auto auto;
+}
+
+.container_uh > .row > .col-md-6 > p {
+    margin: 0px;
+}
+
+.col-md-6 {
+    padding: 10px 20px 10px 20px;
+}
