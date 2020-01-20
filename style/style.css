@@ -1,4 +1,4 @@
-html { scroll-behavior: smooth; } 
+html { scroll-behavior: smooth; }
 
 .navbar {
     background-color: rgba(255, 255, 255, 0.9);
@@ -30,4 +30,104 @@ html { scroll-behavior: smooth; }
 
 .navbar-brand {
     padding-top: 10px;
+}
+
+#sluzby > .container  {
+  width: 80%;
+  justify-content: space-around;
+}
+
+.service_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.row > .text-center > p {
+  margin: 5px;
+  font-size: 12px;
+}
+
+.price_tag {
+  font-size: 30px;
+  text-align: center;
+}
+
+.container_grid {
+  display: grid;
+  grid-template-rows: auto 50px;
+  justify-content: center;
+  align-items: center;
+  --width: 100%;
+  --time: 0.7s;
+  overflow: hidden;
+  width: 250px;
+  height: 280px;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  margin: 15px;
+  padding: 15px;
+  transition: 0.5s;
+}
+
+.container_grid:hover {
+  transform: scale(1.1);
+}
+
+.container_grid .row h3 {
+  position: relative;
+	z-index: 5;
+  color: black;
+	transition: color var(--time);
+}
+
+.container_grid .row p {
+  position: relative;
+  z-index: 5;
+  color: black;
+  transition: color var(--time);
+}
+
+.container_grid .fa-3x {
+  position: relative;
+  z-index: 5;
+  transition: color var(--time);
+  color: purple;
+}
+
+.container_grid:hover .row h3 {
+  color: white;
+}
+
+.container_grid:hover .row p {
+  color: white;
+}
+
+.container_grid:hover .fa-3x {
+  color: white;
+}
+
+.container_grid span {
+	border-radius: 100%;
+	position: absolute;
+	display: block;
+	content: "";
+	z-index: 0;
+	width: 0;
+	height: 0;
+	background: purple;
+	transform: translate(-50%, -50%);
+	transition: width var(--time), padding-top var(--time);
+}
+
+.container_grid:hover span {
+	width: calc(var(--width)*2.7);
+	padding-top: calc(var(--width)* 2.25);
+}
+
+.animated {
+	--angle: 5deg;
+	animation: shake 0.3s;
 }
