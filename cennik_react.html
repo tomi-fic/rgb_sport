@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACT</title>
+
+    <link href="./style/main.a3f694c0.css" rel="stylesheet">
+    <link href="./style/html_react.css" rel="stylesheet">
+
+    <!-- STANDALONE REACT LIBRARIES -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/javascript" src="./js/const.js"></script>
+
+  </head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-fixed-top navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle uarr collapsed" data-toggle="collapse" data-target="#navbar-collapse-uarr">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" title="">
+              <img src="./assets/images/output-onlinepngtools.png" class="navbar-logo-img" alt="" height="70px" width="85px">
+          </a>
+        </div>
+  
+        <div class="collapse navbar-collapse" id="navbar-collapse-uarr">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html#top" title="" class="active">Home</a></li>
+              <li><a href="index.html#sluzby" title=""> Služby</a></li>
+              <li><a href="index.html#galeria" title=""> Galéria </a></li>
+              <li><a href="index.html#onas" title="">o nás</a></li>
+              <li><a href="#" title="">Kontakt</a></li>
+            <li>
+              <p>
+                <a href="cennik_react.html" class="btn btn-primary navbar-btn" title="">Cennik</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="cennik"></div>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="section-container footer-container">
+      <div class="container">
+          <div class="row">
+                  <div class="col-md-4">
+                      <h4>About us</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet consectetur dolor</p>
+                  </div>
+
+                  <div class="col-md-4">
+                      <h4>Do you like ? Share this !</h4>
+                      <p>
+                          <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                          <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                          <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                      </p>
+                      <p><small>© 2020 <a href="https://tomi-fic.github.io/cognix/"class="link-like-text">COGNIX</a>| Website created by
+                                      <a href="http://www.linkedin.com/in/tomasficek/" class="link-like-text">Tomas Ficek</a></small></p>
+                  </div>
+
+                  <div class="col-md-4">
+                      <h4>Subscribe to newsletter</h4>
+
+                      <div class="form-group">
+                          <div class="input-group">
+                              <input type="text" class="form-control footer-input-text">
+                              <div class="input-group-btn">
+                                  <button type="button" class="btn btn-primary btn-newsletter ">OK</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+  <script type="text/babel">
+
+    class App extends React.Component {
+      constructor() {
+        super()
+        this.state = {
+          plItems: [],
+          searchfield: ''
+        }
+      }
+
+      componentDidMount() {
+        this.setState({ plItems : const_dat })
+      }
+
+      onSearchChange = (event) => {
+        this.setState({ searchfield: event.target.value })
+      }
+
+      render() {
+         const { plItems, searchfield } = this.state;
+        const filteredItems = plItems.filter(item =>{
+          return item.name.toLowerCase().includes(searchfield.toLowerCase())
+               ||item.desc.toLowerCase().includes(searchfield.toLowerCase());
+        })
+        return !plItems.length ?
+          <h1>Loading</h1> :
+          (
+            <div>
+              <SearchBox searchChange={this.onSearchChange}/>
+              <Scroll>
+                <div className="container">
+                    <div className="row">
+                      <div className="col-md-8 big">
+                        <CardList plItems={filteredItems} itemGroup="BG"/>
+                        </div>
+                      <div className="col-md-4 small">
+                        <CardList plItems={filteredItems} itemGroup="SM"/>
+                      </div>
+                    </div>
+                </div>
+              </Scroll>
+            </div>
+          );
+      }
+    }
+
+    const SearchBox = ({ searchfield, searchChange }) => {
+      return (
+        <div className="text-center">
+          <input
+            type='search'
+            placeholder='vyhľadaj službu'
+            onChange={searchChange}
+          />
+        </div>
+      );
+    }
+
+    const Scroll = (props) => {
+        return (
+            <div className="scroll" style={{
+                overflowY: 'scroll',
+                margin: '5px'
+                }}
+            >
+                {props.children}
+            </div>
+        );
+    };
+
+    const CardList = ({ plItems, itemGroup }) => {
+      const SmallItems = plItems.filter(robot => robot.group === itemGroup);
+      return (
+        <div className="containerItems">
+          {
+            SmallItems.map((user, i) => {
+              return (
+                <Card
+                  key={i}
+                  id={SmallItems[i].id}
+                  name={SmallItems[i].name}
+                  cena={SmallItems[i].cena}
+                  desc={SmallItems[i].desc}
+                  />
+              );
+            })
+          }
+        </div>
+      );
+    }
+
+    const Card = ({ name, cena, id, desc }) => {
+      return (
+        <div className="itemCard">
+              <div className="nameCennik">
+                <p>{name}</p>
+              </div>
+              <div className="itemDesc">
+                <p>{desc}</p>
+              </div>
+              <div className="priceCennik">
+                <p><strong>{cena}</strong> €</p>
+              </div>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('cennik'));
+
+  </script>
+
+<script type="text/javascript" src="./js/main.41beeca9.js"></script>
+ </body>
+</html>

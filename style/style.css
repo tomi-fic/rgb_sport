@@ -346,6 +346,8 @@ padding: 10px;
 
 
 
+
+
 /* WORKFLOW for mobile devices  */
 @media (max-width: 950px)
 {
@@ -395,7 +397,7 @@ padding: 10px;
     	border: 4px solid purple;
     }
     #myCarousel {
-      height: 400px;
+      height: 450px;
       width: 100%;
       margin: auto;
     }
