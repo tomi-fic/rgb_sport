@@ -2,6 +2,10 @@
   margin: 5px;
 }
 
+.navbar-brand {
+    padding-top: 10px;
+}
+
 input[type=search] {
   width: 200px;
   box-sizing: border-box;
