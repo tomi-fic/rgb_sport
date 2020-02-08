@@ -7,6 +7,7 @@
 
     <link href="./style/main.a3f694c0.css" rel="stylesheet">
     <link href="./style/html_react.css" rel="stylesheet">
+    <!-- <link href="./style/style.css" rel="stylesheet"> -->
 
     <!-- STANDALONE REACT LIBRARIES -->
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -19,81 +20,94 @@
 
 <body>
 
-  <header>
-    <nav class="navbar navbar-fixed-top navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle uarr collapsed" data-toggle="collapse" data-target="#navbar-collapse-uarr">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#" title="">
-              <img src="./assets/images/output-onlinepngtools.png" class="navbar-logo-img" alt="" height="70px" width="85px">
-          </a>
-        </div>
-  
-        <div class="collapse navbar-collapse" id="navbar-collapse-uarr">
-          <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html#top" title="" class="active">Home</a></li>
-              <li><a href="index.html#sluzby" title=""> Služby</a></li>
-              <li><a href="index.html#galeria" title=""> Galéria </a></li>
-              <li><a href="index.html#onas" title="">o nás</a></li>
-              <li><a href="#" title="">Kontakt</a></li>
-            <li>
-              <p>
-                <a href="cennik_react.html" class="btn btn-primary navbar-btn" title="">Cennik</a>
-              </p>
-            </li>
-          </ul>
-        </div>
+ <!-- HEADER -->
+<header>
+  <nav class="navbar navbar-fixed-top navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle uarr collapsed" data-toggle="collapse" data-target="#navbar-collapse-uarr">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand hvr-easeIn" href="index.html#top" title="">
+            <img src="./assets/images/output-onlinepngtools.png" class="navbar-logo-img" alt="" height="70px" width="85px">
+        </a>
       </div>
-    </nav>
-  </header>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-uarr">
+        <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="index.html#top" title="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">Home</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li> -->
+            <li><a href="index.html#sluzby" title="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">Služby</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li>
+            <li><a href="index.html#galeria" title="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">Galéria</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li>
+            <li><a href="index.html#onas" title="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">O nás</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li>
+            <li><a id="SendEmail" title="" href="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">Kontakt</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li>
+            <li><a href="cennik_react.html" title="" class="active hvr-easeIn">
+                <span class="cennikBtn">Cenník</span></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
   <div id="cennik"></div>
 
 <!-- FOOTER -->
 
 <footer>
-  <div class="section-container footer-container">
+  <div class="section-container footer-container ">
       <div class="container">
           <div class="row">
-                  <div class="col-md-4">
-                      <h4>About us</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet consectetur dolor</p>
-                  </div>
-
-                  <div class="col-md-4">
-                      <h4>Do you like ? Share this !</h4>
-                      <p>
-                          <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                          <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                          <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                      </p>
-                      <p><small>© 2020 <a href="https://tomi-fic.github.io/cognix/"class="link-like-text">COGNIX</a>| Website created by
-                                      <a href="http://www.linkedin.com/in/tomasficek/" class="link-like-text">Tomas Ficek</a></small></p>
-                  </div>
-
-                  <div class="col-md-4">
-                      <h4>Subscribe to newsletter</h4>
-
-                      <div class="form-group">
-                          <div class="input-group">
-                              <input type="text" class="form-control footer-input-text">
-                              <div class="input-group-btn">
-                                  <button type="button" class="btn btn-primary btn-newsletter ">OK</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+            <div class="col-md-4">
+                <!-- <h4>Prihlás sa k odberu noviniek</h4> -->
+                <!-- <div class="form-group">
+                    <div class="input-group">
+                        <input type="text"
+                               placeholder='Prihlás sa k odberu noviniek'
+                               class="form-control footer-input-text">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-primary btn-newsletter ">OK</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-md-4 text-center footer_desc">
+                <p>© 2020 <a href="https://tomi-fic.github.io/cognix/"class="link-like-text">COGNIX</a>| Website created by
+                                <a href="http://www.linkedin.com/in/tomasficek/" class="link-like-text">Tomas Ficek</a></p>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center">
+                <a href="https://facebook.com/" class="fa-icon" title="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/" class="fa-icon" title="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/" class="fa-icon" title="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="fa-icon" title="">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
           </div>
       </div>
   </div>

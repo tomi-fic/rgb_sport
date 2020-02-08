@@ -33,23 +33,36 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#" title="">
+        <a class="navbar-brand hvr-easeIn" href="#top" title="">
             <img src="./assets/images/output-onlinepngtools.png" class="navbar-logo-img" alt="" height="70px" width="85px">
         </a>
       </div>
 
       <div class="collapse navbar-collapse" id="navbar-collapse-uarr">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#top" title="" class="active">Home</a></li>
-            <li><a href="#sluzby" title=""> Služby</a></li>
-            <li><a href="#galeria" title=""> Galéria </a></li>
-            <li><a href="#onas" title="">o nás</a></li>
-            <li><a href="#" title="">Kontakt</a></li>
-          <li>
-            <p>
-              <a href="cennik_react.html" class="btn btn-primary navbar-btn" title="">Cennik</a>
-            </p>
-          </li>
+            <!-- <li><a href="#top" title="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">Home</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li> -->
+            <li><a href="#sluzby" title="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">Služby</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li>
+            <li><a href="#galeria" title="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">Galéria</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li>
+            <li><a href="#onas" title="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">O nás</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li>
+            <li><a id="SendEmail" title="" href="" class="active">
+                <span class="hvr-underline-from-center hvr-easeIn">Kontakt</span></a>
+            </li>
+            <li><a title="" class="separator"><p>|</p></a></li>
+            <li><a href="cennik_react.html" title="" class="active hvr-easeIn">
+                <span class="cennikBtn">Cenník</span></a>
+            </li>
         </ul>
       </div>
     </div>
@@ -137,7 +150,7 @@ style="background-image: url('./assets/images/rsz_josh-nuttall-zkvi57uyhiq-unspl
                     </div>
                     <div class="text-center">
                         <h3>Poradenstvo</h3>
-                        <p>Pomôžeme s výberom a nastavením jednotlivých komponentov bicykla
+                        <p>Pomôžeme s výberom bicykla a nastavením jednotlivých komponentov
                         </p>
                     </div>
                   </div>
@@ -285,8 +298,8 @@ style="background-image: url('./assets/images/rsz_josh-nuttall-zkvi57uyhiq-unspl
           <div class="col-xs-12">
               <div class="text-right">
                   <br>
-                  <span class="signature">Róbert Graus</span>
-                  <p>zakladateľ a majiteľ RG Šport</p>
+                  <span class="signature">Tím RGB</span>
+                  <!-- <p>zakladateľ a majiteľ RG Šport</p> -->
               </div>
           </div>
       </div>
@@ -296,11 +309,11 @@ style="background-image: url('./assets/images/rsz_josh-nuttall-zkvi57uyhiq-unspl
 <div class="section-container">
   <div class="container">
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-6">
               <br>
               <div id="map"></div>
           </div>
-            <div class="col-md-5" id="orient_bar">
+            <div class="col-md-6" id="orient_bar">
                       <div class="col-md-6 text-center">
                           <h3>Kde nás nájdete:</h3><br>
                           <p><strong>BICYKLE RG Šport</strong></p>
@@ -309,11 +322,14 @@ style="background-image: url('./assets/images/rsz_josh-nuttall-zkvi57uyhiq-unspl
                           <p>rgb@gmail.com</p>
                           <p><strong>+421905 236 518</strong></p>
                       </div>
-                      <div class="col-md-6 text-center">
+                      <div class="col-md-6  text-center">
                           <h3>Otváracie hodiny</h3><br>
-                          <p>Pon-Pia  15:00-18:00</p>
-                          <p>Sobota   15:00-18:00</p>
-                          <p>Nedela   15:00-18:00</p>
+                          <div class="container_uh">
+                          <p>Pon-Pia:&nbsp 10:00-13:00 (1.3-31.10)</p>
+                          <p>Pon-Pia:&nbsp 15:00-18:00 (celoročne)</p>
+                          <p>Sobota: &nbsp 09:00-12:00</p>
+                          <p>Nedeľa: &nbsp zatvorené</p>
+                        </div>
                       </div>
             </div>
           <!-- </div> -->
@@ -382,47 +398,47 @@ style="background-image: url('./assets/images/rsz_josh-nuttall-zkvi57uyhiq-unspl
 <!-- FOOTER -->
 
 <footer>
-    <div class="section-container footer-container">
+    <div class="section-container footer-container ">
         <div class="container">
             <div class="row">
-                    <div class="col-md-4">
-                        <h4>About us</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet consectetur dolor</p>
-                    </div>
-
-                    <div class="col-md-4">
-                        <h4>Do you like ? Share this !</h4>
-                        <p>
-                            <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                          </a>
-                          <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                          </a>
-                          <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          </a>
-                        </p>
-                        <p><small>© 2020 <a href="https://tomi-fic.github.io/cognix/"class="link-like-text">COGNIX</a>| Website created by
-                                        <a href="http://www.linkedin.com/in/tomasficek/" class="link-like-text">Tomas Ficek</a></small></p>
-                    </div>
-
-                    <div class="col-md-4">
-                        <h4>Subscribe to newsletter</h4>
-
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input type="text" class="form-control footer-input-text">
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-primary btn-newsletter ">OK</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="col-md-4">
+                  <!-- <h4>Prihlás sa k odberu noviniek</h4> -->
+                  <!-- <div class="form-group">
+                      <div class="input-group">
+                          <input type="text"
+                                 placeholder='Prihlás sa k odberu noviniek'
+                                 class="form-control footer-input-text">
+                          <div class="input-group-btn">
+                              <button type="button" class="btn btn-primary btn-newsletter ">OK</button>
+                          </div>
+                      </div>
+                  </div> -->
+              </div>
+              <div class="col-md-4 text-center footer_desc">
+                  <p>© 2020 <a href="https://tomi-fic.github.io/cognix/"class="link-like-text">COGNIX</a>| Website created by
+                                  <a href="http://www.linkedin.com/in/tomasficek/" class="link-like-text">Tomas Ficek</a></p>
+              </div>
+              <div class="col-md-4">
+                <div class="text-center">
+                  <a href="https://facebook.com/" class="fa-icon" title="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://twitter.com/" class="fa-icon" title="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/" class="fa-icon" title="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a class="fa-icon" title="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
             </div>
         </div>
     </div>
 </footer>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {

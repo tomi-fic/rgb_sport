@@ -20,9 +20,18 @@ var c = document.getElementById("lineDraw");
 window.addEventListener("resize", drawFunction);
 drawFunction();
 
+
+
+// var elems = document.querySelectorAll(".hvr-underline-from-center");
+// [].forEach.call(elems, function(el) {
+//     el.classList.remove("hvr-underline-from-center");
+// });
+
+
+
 function drawFunction() {
 	var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-	if (screenWidth < 950) {c.width  = 300;c.height = 670;}
+	if (screenWidth < 950) {c.width  = 300; c.height = 670;}
 					  else {c.width  = 790;c.height = 450;}
 	var ctx = c.getContext("2d");
 	ctx.clearRect(0, 0, c.width, c.height);
@@ -68,3 +77,6 @@ function drawFunction() {
 	}
 	ctx.stroke();
 }
+
+document.getElementById("SendEmail").addEventListener("click", popUpEmail);
+function popUpEmail () { window.open('mailto:rgsport66@gmail.com?subject=Online Objednavka&body='); }
