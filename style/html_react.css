@@ -66,7 +66,7 @@ input[type=search]:focus {
   border: 5px solid purple;
   width: 400px;
   display: grid;
-  grid-template-columns: 300px 100px;
+  grid-template-columns: : 300px 100px;
   margin: 10px;
   border-radius: 25px;
 }
@@ -270,7 +270,7 @@ background: white;
 
 
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 770px)
 {
   /* BIG parts */
   .big .itemCard {
@@ -307,14 +307,9 @@ background: white;
   }
 
   .scroll {
-    height: 550px;
+    height: 470px;
   }
 
-}
-
-/* WORKFLOW for mobile devices  */
-@media (max-width: 770px)
-{
   .separator p {
     display: none;
   }
